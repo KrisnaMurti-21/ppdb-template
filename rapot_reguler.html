@@ -1,151 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Input Nilai Pengetahuan Rapor</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <style>
-        /* Mengubah warna latar belakang card-header dan button */
-        .container h1 {
-            color: #FF7733;
-            
-        }
-        .card-header {
-            background-color: #FF7733;
-            color: #fff;
-        }
-        .btn-primary {
-            background-color: #FF7733;
-            border-color: #FF7733;
-        }
-        .btn-primary:hover {
-            background-color: #e65c1e; /* Warna yang sedikit lebih gelap saat hover */
-            border-color: #e65c1e;
-        }
-        /* Mengubah warna teks label dan input */
-        .form-label {
-            color: #333;
-        }
-        .form-control {
-            border-color: #FF7733;
-        }
-        .form-control:focus {
-            border-color: #FF7733;
-            box-shadow: 0 0 0 0.2rem rgba(255, 119, 51, 0.25);
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container my-5">
-        <h1 class="mb-4" style="text-align: center" >Form Input Nilai Pengetahuan Rapor Kelas 7 dan 8</h1>
-        
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Koh+Santepheap:wght@100;300;400;700;900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- end fonts -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div
+      class="container shadow-lg p-3 mb-5 mt-5 justify-content-center rounded"
+    >
+      <div class="mt-5">
+        <h2 class="text-center text-orange poppins-bold">
+          Form Input Nilai Pengetahuan Rapor Kelas 7 dan 8
+        </h2>
+        <div class="step mt-4">
+          <span class="circle active">1</span>
+          <span class="line active"></span>
+          <span class="circle active">2</span>
+          <span class="line"></span>
+          <span class="circle">3</span>
+          <span class="line"></span>
+          <span class="circle">4</span>
+        </div>
+      </div>
+
+      <div class="mt-5">
         <form>
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Kelas 7 Semester 1 -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h5>Kelas 7 Semester 1</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="math7s1" class="form-label">Matematika</label>
-                                <input type="number" class="form-control" id="math7s1" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                            <div class="mb-3">
-                                <label for="english7s1" class="form-label">Bahasa Inggris</label>
-                                <input type="number" class="form-control" id="english7s1" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ipa7s1" class="form-label">IPA</label>
-                                <input type="number" class="form-control" id="ipa7s1" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                        </div>
-                    </div>
+          <div class="row">
+            <div class="col-md-6">
+              <!-- Kelas 7 Semester 1 -->
+              <div class="card mb-4">
+                <div class="card-header bg-orange">
+                  <h5 class="card-title text-white noto-sans-regular">
+                    Kelas 7 Semester 1
+                  </h5>
                 </div>
-                <div class="col-md-6">
-                    <!-- Kelas 7 Semester 2 -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h5>Kelas 7 Semester 2</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="math7s2" class="form-label">Matematika</label>
-                                <input type="number" class="form-control" id="math7s2" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                            <div class="mb-3">
-                                <label for="english7s2" class="form-label">Bahasa Inggris</label>
-                                <input type="number" class="form-control" id="english7s2" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ipa7s2" class="form-label">IPA</label>
-                                <input type="number" class="form-control" id="ipa7s2" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="math7s1" class="form-label noto-sans-regular"
+                      >Matematika</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="math7s1"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="english7s1" class="form-label noto-sans-regular"
+                      >Bahasa Inggris</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="english7s1"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="ipa7s1" class="form-label noto-sans-regular"
+                      >IPA</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="ipa7s1"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
                 </div>
+              </div>
             </div>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <!-- Kelas 8 Semester 1 -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h5>Kelas 8 Semester 1</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="math8s1" class="form-label">Matematika</label>
-                                <input type="number" class="form-control" id="math8s1" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                            <div class="mb-3">
-                                <label for="english8s1" class="form-label">Bahasa Inggris</label>
-                                <input type="number" class="form-control" id="english8s1" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ipa8s1" class="form-label">IPA</label>
-                                <input type="number" class="form-control" id="ipa8s1" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-md-6">
+              <!-- Kelas 7 Semester 2 -->
+              <div class="card mb-4">
+                <div class="card-header bg-orange">
+                  <h5 class="card-title text-white noto-sans-regular">
+                    Kelas 7 Semester 2
+                  </h5>
                 </div>
-                <div class="col-md-6">
-                    <!-- Kelas 8 Semester 2 -->
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <h5>Kelas 8 Semester 2</h5>
-                        </div>
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="math8s2" class="form-label">Matematika</label>
-                                <input type="number" class="form-control" id="math8s2" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                            <div class="mb-3">
-                                <label for="english8s2" class="form-label">Bahasa Inggris</label>
-                                <input type="number" class="form-control" id="english8s2" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                            <div class="mb-3">
-                                <label for="ipa8s2" class="form-label">IPA</label>
-                                <input type="number" class="form-control" id="ipa8s2" placeholder="Masukkan nilai" min="0" max="100">
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="math7s2" class="form-label noto-sans-regular"
+                      >Matematika</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="math7s2"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="english7s2" class="form-label noto-sans-regular"
+                      >Bahasa Inggris</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="english7s2"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="ipa7s2" class="form-label noto-sans-regular"
+                      >IPA</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="ipa7s2"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
                 </div>
+              </div>
             </div>
-            
-            <!-- Submit Button -->
-            <div class="d-grid">
-                <button type="submit" class="btn btn-primary">Selanjutnya</button>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <!-- Kelas 8 Semester 1 -->
+              <div class="card mb-4">
+                <div class="card-header bg-orange">
+                  <h5 class="card-title text-white noto-sans-regular">
+                    Kelas 8 Semester 1
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="math8s1" class="form-label noto-sans-regular"
+                      >Matematika</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="math8s1"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="english8s1" class="form-label noto-sans-regular"
+                      >Bahasa Inggris</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="english8s1"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="ipa8s1" class="form-label noto-sans-regular"
+                      >IPA</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="ipa8s1"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <div class="col-md-6">
+              <!-- Kelas 8 Semester 2 -->
+              <div class="card mb-4">
+                <div class="card-header bg-orange">
+                  <h5 class="card-title text-white noto-sans-regular">
+                    Kelas 8 Semester 2
+                  </h5>
+                </div>
+                <div class="card-body">
+                  <div class="mb-3">
+                    <label for="math8s2" class="form-label noto-sans-regular"
+                      >Matematika</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="math8s2"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="english8s2" class="form-label noto-sans-regular"
+                      >Bahasa Inggris</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="english8s2"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <label for="ipa8s2" class="form-label noto-sans-regular"
+                      >IPA</label
+                    >
+                    <input
+                      type="number"
+                      class="form-control border-orange"
+                      id="ipa8s2"
+                      placeholder="Masukkan nilai"
+                      min="0"
+                      max="100"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-orange text-white mt-3">
+              Selanjutnya
+            </button>
+          </div>
         </form>
+      </div>
     </div>
+    <div class="mt-5"><br /></div>
 
-    <!-- Bootstrap JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
