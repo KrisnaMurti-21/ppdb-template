@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Kondisi Kesehatan Calon Siswa</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-container h2 {
+            color: #FF7733;
+            margin-bottom: 20px;
+        }
+        .btn-primary {
+            background-color: #FF7733;
+            border-color: #FF7733;
+        }
+        .btn-primary:hover {
+            background-color: #e7662d;
+            border-color: #e7662d;
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            border-radius: 5px;
+            border-color: #e7662d;
+        }
+        .hidden {
+            display: none;
+        }
+        .form-control:focus {
+            border-color: #FF7733;
+            box-shadow: 0 0 0 0.2rem rgba(255, 119, 51, 0.25);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2 style="text-align: center">Kondisi Kesehatan Calon Siswa</h2>
+            <form>
+                <div class="form-group">
+                    <label for="golonganDarah">Golongan Darah:</label>
+                    <select class="form-control" id="golonganDarah">
+                        <option value="" disabled selected>Pilih golongan darah</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tinggiBadan">Tinggi Badan (cm):</label>
+                    <input type="number" class="form-control" id="tinggiBadan" placeholder="Masukkan tinggi badan">
+                </div>
+                <div class="form-group">
+                    <label for="beratBadan">Berat Badan (kg):</label>
+                    <input type="number" class="form-control" id="beratBadan" placeholder="Masukkan berat badan">
+                </div>
+                <div class="form-group">
+                    <label for="alergi">Apakah Anda memiliki alergi?</label>
+                    <select class="form-control" id="alergi">
+                        <option value="" disabled selected>Pilih jawaban</option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                    </select>
+                </div>
+                <div id="jenisAlergiSection" class="form-group hidden">
+                    <label for="jenisAlergi">Jika Ya, sebutkan jenis alergi:</label>
+                    <input type="text" class="form-control" id="jenisAlergi" placeholder="Masukkan jenis alergi">
+                </div>
+                <div class="form-group">
+                    <label for="penyakitKronis">Apakah Anda memiliki riwayat penyakit kronis?</label>
+                    <select class="form-control" id="penyakitKronis">
+                        <option value="" disabled selected>Pilih jawaban</option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                    </select>
+                </div>
+                <div id="jenisPenyakitSection" class="form-group hidden">
+                    <label for="jenisPenyakit">Jika Ya, sebutkan jenis penyakit:</label>
+                    <input type="text" class="form-control" id="jenisPenyakit" placeholder="Masukkan jenis penyakit">
+                </div>
+                <div class="form-group">
+                    <label for="perawatanMedis">Apakah Anda sedang dalam perawatan medis?</label>
+                    <select class="form-control" id="perawatanMedis">
+                        <option value="" disabled selected>Pilih jawaban</option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                    </select>
+                </div>
+                <div id="jenisPerawatanSection" class="form-group hidden">
+                    <label for="jenisPerawatan">Jika Ya, sebutkan jenis perawatan:</label>
+                    <input type="text" class="form-control" id="jenisPerawatan" placeholder="Masukkan jenis perawatan">
+                </div>
+                <div class="form-group">
+                    <label for="operasi">Apakah Anda pernah menjalani operasi?</label>
+                    <select class="form-control" id="operasi">
+                        <option value="" disabled selected>Pilih jawaban</option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                    </select>
+                </div>
+                <div id="jenisOperasiSection" class="form-group hidden">
+                    <label for="jenisOperasi">Jika Ya, sebutkan jenis operasi dan tanggal:</label>
+                    <input type="text" class="form-control" id="jenisOperasi" placeholder="Masukkan jenis operasi dan tanggal">
+                </div>
+                <div class="form-group">
+                    <label for="obatObatan">Apakah Anda rutin mengonsumsi obat-obatan?</label>
+                    <select class="form-control" id="obatObatan">
+                        <option value="" disabled selected>Pilih jawaban</option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                    </select>
+                </div>
+                <div id="jenisObatSection" class="form-group hidden">
+                    <label for="jenisObat">Jika Ya, sebutkan jenis obat:</label>
+                    <input type="text" class="form-control" id="jenisObat" placeholder="Masukkan jenis obat">
+                </div>
+                <div class="form-group">
+                    <label for="keterbatasanFisik">Apakah Anda memiliki keterbatasan fisik atau kebutuhan khusus?</label>
+                    <select class="form-control" id="keterbatasanFisik">
+                        <option value="" disabled selected>Pilih jawaban</option>
+                        <option value="Ya">Ya</option>
+                        <option value="Tidak">Tidak</option>
+                    </select>
+                </div>
+                <div id="jenisKeterbatasanSection" class="form-group hidden">
+                    <label for="jenisKeterbatasan">Jika Ya, sebutkan keterbatasan atau kebutuhan khusus:</label>
+                    <input type="text" class="form-control" id="jenisKeterbatasan" placeholder="Masukkan keterbatasan atau kebutuhan khusus">
+                </div>
+                <div class="form-group">
+                    <label for="keteranganTambahan">Keterangan tambahan mengenai kondisi kesehatan:</label>
+                    <textarea class="form-control" id="keteranganTambahan" rows="3" placeholder="Masukkan keterangan tambahan"></textarea>
+                </div>
+                <div class="form-group">
+                    <p class="text-muted"><strong>Catatan:</strong> Isikan informasi kesehatan ini dengan lengkap dan jujur. SMA Unggulan Rushd hanya menyediakan fasilitas untuk pengobatan ringan. Untuk kebutuhan pengobatan yang lebih serius, hal tersebut menjadi tanggung jawab orang tua atau wali siswa. Penyampaian informasi yang tidak benar mengakibatkan diskualifikasi calon siswa atau siswa.</p>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Selanjutnya</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- JavaScript to show/hide fields based on dropdown selection -->
+    <script>
+        document.getElementById('alergi').addEventListener('change', function() {
+            var value = this.value;
+            var jenisAlergiSection = document.getElementById('jenisAlergiSection');
+            if (value === 'Ya') {
+                jenisAlergiSection.classList.remove('hidden');
+            } else {
+                jenisAlergiSection.classList.add('hidden');
+                document.getElementById('jenisAlergi').value = '';
+            }
+        });
+
+        document.getElementById('penyakitKronis').addEventListener('change', function() {
+            var value = this.value;
+            var jenisPenyakitSection = document.getElementById('jenisPenyakitSection');
+            if (value === 'Ya') {
+                jenisPenyakitSection.classList.remove('hidden');
+            } else {
+                jenisPenyakitSection.classList.add('hidden');
+                document.getElementById('jenisPenyakit').value = '';
+            }
+        });
+
+        document.getElementById('perawatanMedis').addEventListener('change', function() {
+            var value = this.value;
+            var jenisPerawatanSection = document.getElementById('jenisPerawatanSection');
+            if (value === 'Ya') {
+                jenisPerawatanSection.classList.remove('hidden');
+            } else {
+                jenisPerawatanSection.classList.add('hidden');
+                document.getElementById('jenisPerawatan').value = '';
+            }
+        });
+
+        document.getElementById('operasi').addEventListener('change', function() {
+            var value = this.value;
+            var jenisOperasiSection = document.getElementById('jenisOperasiSection');
+            if (value === 'Ya') {
+                jenisOperasiSection.classList.remove('hidden');
+            } else {
+                jenisOperasiSection.classList.add('hidden');
+                document.getElementById('jenisOperasi').value = '';
+            }
+        });
+
+        document.getElementById('obatObatan').addEventListener('change', function() {
+            var value = this.value;
+            var jenisObatSection = document.getElementById('jenisObatSection');
+            if (value === 'Ya') {
+                jenisObatSection.classList.remove('hidden');
+            } else {
+                jenisObatSection.classList.add('hidden');
+                document.getElementById('jenisObat').value = '';
+            }
+        });
+
+        document.getElementById('keterbatasanFisik').addEventListener('change', function() {
+            var value = this.value;
+            var jenisKeterbatasanSection = document.getElementById('jenisKeterbatasanSection');
+            if (value === 'Ya') {
+                jenisKeterbatasanSection.classList.remove('hidden');
+            } else {
+                jenisKeterbatasanSection.classList.add('hidden');
+                document.getElementById('jenisKeterbatasan').value = '';
+            }
+        });
+    </script>
+</body>
+</html>
