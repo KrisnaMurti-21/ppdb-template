@@ -283,6 +283,9 @@
             background-color: #6c63ff;
             color: white;
         }
+        .prestasi h2{
+            color: #FF7733;
+        }
     
 
         /* ------------------------ FAQ--------------------*/
@@ -293,6 +296,7 @@
         }
 
         .faq h2 {
+        color: #FF7733;
         text-align: center;
         font-size: 2rem;
         font-weight: 700;
@@ -394,11 +398,14 @@
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
             transition: all 0.3s ease-in-out;
         }
+        
         .blog h2 {
-        text-align: center;
-        font-size: 2rem;
-        font-weight: 700;
+            color: #FF7733;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
         }
+        
 
         /* ------------------------ LOGO UNIV--------------------*/
         h1 {
