@@ -1,407 +1,529 @@
-body {
-  height: 100%;
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(to right, #ffecd2, #fcb69f);
-}
-
-/* Untuk Fonts */
-.koh-santepheap-thin {
-  font-family: "Koh Santepheap", serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.koh-santepheap-light {
-  font-family: "Koh Santepheap", serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.koh-santepheap-regular {
-  font-family: "Koh Santepheap", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.koh-santepheap-bold {
-  font-family: "Koh Santepheap", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.koh-santepheap-black {
-  font-family: "Koh Santepheap", serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
-
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
-
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
-
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
-
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
-
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
-
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
-
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
-
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-
-.noto-sans-bold {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 700; /* 700 for bold weight */
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
-
-.noto-sans-regular {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
-/* End Fonts  */
-
-.background-image-login {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background-image-login::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right, white 25%, transparent 25%),
-    url("/assets/rushd-library-1024x777 1.png"); /* Ganti dengan URL gambar Anda */
-  background-size: cover;
-  background-position: right center;
-  z-index: -1; /* Letakkan di belakang konten */
-}
-
-.background-image-login::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.5
-  ); /* Overlay warna putih dengan transparansi */
-  z-index: -1; /* Letakkan di belakang konten */
-}
-
-.background-image-register {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background-image-register::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("/assets/rushd-school-landscape-1024x717\ 1.png"); /* Ganti dengan URL gambar Anda */
-  background-size: cover;
-  background-position: right center;
-  z-index: -1; /* Letakkan di belakang konten */
-}
-
-.background-image-register::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(
-    255,
-    255,
-    255,
-    0.5
-  ); /* Overlay warna putih dengan transparansi */
-  z-index: -1; /* Letakkan di belakang konten */
-}
-
-.background-image-path {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.background-image-path::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url("/assets/aa\ 1.png"); /* Ganti dengan URL gambar Anda */
-  background-size: cover;
-  background-position: right center;
-  z-index: -1; /* Letakkan di belakang konten */
-}
-
-.background-image-path::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(
-    255,
-    119,
-    51,
-    0.65
-  ); /* Overlay warna putih dengan transparansi */
-  z-index: -1; /* Letakkan di belakang konten */
-}
-
-.form-container-orange {
-  background-color: #ff7733;
-}
-
-.form-text-14 {
-  font-size: 14px;
-}
-
-.logo-sekolah {
-  width: 98px;
-}
-
-.text-shadow {
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.card-image-size {
-  width: 100%;
-  height: 12.5rem;
-  object-fit: cover;
-  border-radius: 0;
-}
-
-.card-paragraph {
-  height: 6.25rem;
-}
-
 .text-orange {
   color: #ff7733;
 }
-
-.bg-orange {
+.text-light-purple {
+  color: #6c63ff;
+}
+/* ------------------------ TOPBAR DAN NAVBAR --------------------*/
+.top-bar {
   background-color: #ff7733;
+  color: white;
+}
+.top-bar a {
+  color: white;
+  text-decoration: none;
+}
+.navbar {
+  background-color: white;
+  box-shadow: 0 4px 2px -2px gray;
+}
+.navbar-brand {
+  font-weight: bold;
+  color: black;
+}
+.nav-link {
+  color: black;
+}
+.nav-link.active {
+  color: #6f42c1;
+  border-bottom: 3px solid #6f42c1;
+}
+.btn-primary {
+  background-color: #6f42c1;
+  border: none;
+}
+.icon-spacing {
+  margin-right: 5px;
+}
+/* ------------------------ CAROUSEL --------------------*/
+.carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  background-size: cover;
+  position: relative;
 }
 
-.btn-orange {
-  background-color: #ff7733;
+.carousel-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.btn-orange:hover {
-  background-color: #e7662d;
-}
-
-.border-orange {
-  border-color: #ff7733;
-}
-
-.border-orange:focus {
-  border-color: #ff7733;
-  box-shadow: 0 0 0 0.2rem rgba(255, 119, 51, 0.25);
-}
-
-/* bar progres style */
-.step {
+.carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  color: #ffffff;
   text-align: center;
+}
+
+/* ------------------------ CARD ANGKA --------------------*/
+
+.card-custom {
+  background-color: #fff;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05); /* Lighter shadow for a smoother appearance */
+  border-radius: 8px; /* Slightly rounded corners */
+  padding: 15px; /* Thinner padding for an elegant look */
+  text-align: center;
+  width: 100%; /* Expand card width to full container */
+  max-width: 1000px; /* Allow card to be wider */
+  margin: 0 auto; /* Center the card horizontally */
+}
+.numbers-container {
+  display: flex;
+  justify-content: space-around; /* Space numbers evenly */
+  text-align: center;
+  padding: 20px 0; /* Increased padding for more space */
+}
+
+.number-item {
+  flex: 1; /* Allow number items to stretch evenly */
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.number-value {
+  font-size: 2.5rem;
+  color: #ff7733;
+  font-weight: bold;
+}
+
+/* ------------------------ CARD TIMELINE --------------------*/
+
+.timeline-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px; /* Maximum width for larger screens */
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start; /* Align items to the start vertically */
+  margin-bottom: 20px; /* Reduced margin-bottom */
+  position: relative;
+  padding: 10px 0;
+}
+
+.timeline-item:first-of-type::before {
+  content: "";
+  position: absolute;
+  left: -15px;
+  top: 0;
+  height: 100%;
+  border-left: 3px solid #ff7733;
+}
+
+.timeline-item:first-of-type {
+  background-color: #f0e5ff;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.timeline-item-icon {
+  color: #000;
+  font-size: 1.5rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.timeline-item-content {
+  flex: 1;
+  font-size: 0.95rem;
+  color: #000;
+  display: flex;
+  flex-direction: column; /* Stack title and subtitle vertically */
+}
+
+.timeline-item-title {
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 5px; /* Reduced space below title */
+}
+
+.timeline-item-subtitle {
+  color: #000;
+  margin-top: 0; /* Removed space above subtitle */
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 500px; /* Match height to the timeline height */
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden; /* Hide overflow for the rounded corners */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop the image to cover the container */
+}
+
+.quote-box {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1); /* Semi-transparent white background */
+  border-radius: 8px;
+  box-shadow: 0px 4px 9px rgba(23, 26, 31, 0.1),
+    0px 0px 2px rgba(23, 26, 31, 0.1);
+  backdrop-filter: blur(5px); /* Apply a softer blur effect */
+  font-size: 0.95rem;
+  text-align: center;
+  max-width: 80%; /* Adjust to fit inside the container */
+}
+
+.quote-icon {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 1.5rem; /* Larger icon size */
+  color: #6d31ed; /* Color of the icon */
+}
+
+.quote-text {
+  margin-left: 25px; /* Add padding to avoid overlap with the icon */
+  font-size: 0.95rem;
+  color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column; /* Stack icon and content vertically on tablets */
+    align-items: flex-start; /* Align items to the start */
+    padding-left: 0; /* Remove left padding for vertical alignment */
+  }
+
+  .timeline-item-icon {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .timeline-item-content {
+    font-size: 0.85rem; /* Adjust font size for smaller screens */
+  }
+
+  .image-container {
+    height: 400px; /* Adjust height for mobile view */
+  }
+
+  .quote-box {
+    bottom: 5%; /* Adjust position for smaller screens */
+    left: 50%;
+    transform: translate(-50%, 0); /* Center horizontally */
+    width: 90%; /* Adjust width for mobile view */
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.25rem; /* Reduce font size on very small screens */
+  }
+
+  .timeline-item-content {
+    font-size: 0.75rem; /* Further reduce font size on very small screens */
+  }
+
+  .image-container {
+    height: 300px; /* Further reduce height for very small screens */
+  }
+
+  .quote-box {
+    width: 90%; /* Ensure the box fits well on small screens */
+    transform: translateX(-50%); /* Center horizontally */
+    bottom: 10%; /* Keep some space from the bottom */
+  }
+}
+
+/* ------------------------ PRESTASI REGULER--------------------*/
+.line-curve {
+  width: 50px;
+  height: 5px;
+  background-color: #ff7733;
+  border-radius: 50px;
+  margin-top: 8px;
   margin-bottom: 20px;
 }
 
-.step .circle {
-  width: 40px;
-  height: 40px;
-  background: #f1f1f1;
-  border-radius: 50%;
-  display: inline-block;
-  line-height: 40px;
-  vertical-align: middle;
-  color: #333; /* Warna teks default */
+.btn-learn-more {
+  background-color: transparent;
+  border: 2px solid #6c63ff;
+  color: #6c63ff;
+  border-radius: 50px;
+  padding: 10px 20px;
+  text-decoration: none;
 }
 
-.step .line {
-  height: 4px;
-  background: #f1f1f1;
-  display: inline-block;
-  width: 60px;
-  vertical-align: middle;
-}
-
-.step .circle.active {
-  background: #ff7733;
+.btn-learn-more:hover {
+  background-color: #6c63ff;
   color: white;
 }
-
-.step .line.active {
-  background: #ff7733;
+.prestasi h2 {
+  color: #ff7733;
 }
 
-.teks-berhasil {
-  color: #170f49;
+.prestasi-title-list {
+  color: #ff7733;
+  font-weight: bold;
+  text-align: center;
 }
 
-.confirmation-card {
-  animation: popUp 0.5s ease-out forwards;
+.card-p-unggulan {
+  height: 14rem;
 }
-@keyframes popUp {
+@media (max-width: 768px) {
+  .card-p-unggulan {
+    height: 12rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .card-p-unggulan {
+    height: 12rem;
+    width: 9rem;
+  }
+}
+/* ------------------------ FAQ--------------------*/
+.faq {
+  /* padding: 60px 0; */
+  background-color: #ffffff; /* Light grey color */
+  color: #333;
+}
+
+.faq h2 {
+  color: #ff7733;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.section-title {
+  color: #ff7733;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.program-card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.program-card:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.program-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.program-card img:hover {
+  transform: scale(1.05);
+}
+
+.program-card h5 {
+  color: #ff7733;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.program-card p {
+  margin-top: 0.5rem;
+}
+
+/* ------------------------ ACHIVEMENT--------------------*/
+.section-title {
+  color: #ff7733;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.program-card {
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.program-card:nth-child(even) {
+  background-color: #f7f7f7;
+}
+
+.program-card img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.program-card img:hover {
+  transform: scale(1.05);
+}
+
+.program-card h5 {
+  color: #ff7733;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.program-card p {
+  margin-top: 0.5rem;
+}
+@media (max-width: 768px) {
+  .card-p-unggulan {
+    height: 12rem;
+    width: 9rem;
+  }
+}
+/* ------------------------ BLOG--------------------*/
+.card-hover:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.blog h2 {
+  color: #ff7733;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.truncate-multiline {
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Jumlah baris yang ingin ditampilkan */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+/* ------------------------ LOGO UNIV--------------------*/
+h1 {
+  color: #ff7733; /* Color orange */
+}
+.logo-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.logo-row {
+  display: flex;
+  animation: slide 15s linear infinite;
+}
+
+.logo-item {
+  flex: 0 0 auto;
+  width: 10%; /* Adjust width as needed */
+  padding: 0.2rem; /* Reduced padding for closer spacing */
+  box-sizing: border-box;
+}
+
+.logo-item img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.logo-item img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slide {
   0% {
-    transform: scale(0.5);
-    opacity: 0;
+    transform: translateX(0);
   }
   100% {
-    transform: scale(1);
-    opacity: 1;
+    transform: translateX(-100%);
   }
 }
 
-@media screen and (max-width: 576px) {
-  .logo-sekolah {
-    width: 60px;
-  }
+/* ------------------------ FOOTER--------------------*/
+footer {
+  background-color: #f3ebe7;
+  color: #080808;
+  padding: 20px;
+  font-family: "Roboto", sans-serif;
+}
 
-  .card-image-size {
-    width: 100%;
-    height: 8rem;
-    object-fit: cover;
-    border-radius: 0;
-  }
+footer i {
+  font-family: "Roboto", sans-serif;
+}
 
-  .card-paragraph {
-    height: 3rem;
-  }
+.map-responsive {
+  margin-top: 30px;
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
-  .card-body p {
-    font-size: 12px;
-  }
-
-  .background-image-path {
-    min-height: auto;
-    height: auto;
-  }
-
-  .step .circle {
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-  }
-
-  .step .line {
-    width: 40px;
-  }
+/* Gaya untuk tombol scroll up */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff7733; /* Warna oranye */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s, transform 0.3s;
+}
+.back-to-top:hover {
+  background-color: #e65c00; /* Warna oranye lebih gelap saat hover */
+  transform: scale(1.1);
 }
