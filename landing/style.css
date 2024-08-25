@@ -303,6 +303,7 @@
 @media (max-width: 768px) {
   .card-p-unggulan {
     height: 12rem;
+    width: 9rem;
   }
 }
 
