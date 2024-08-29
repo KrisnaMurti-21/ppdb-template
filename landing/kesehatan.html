@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMA Unggulan RUSHD</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Icons from Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="form-bg">
+    <div class="container mt-5 mb-5 rounded">
+      <div class="title-form-me fw-bold px-5 fs-4 rounded-top py-3">
+        Isi Kondisi Kesehatan Calon Siswa
+      </div>
+      <div class="bg-white pt-3 rounded-bottom">
+        <!-- tab daftar form -->
+        <div class="row px-5">
+          <div class="col text-form-me text-center fs-6 py-3">
+            <i class="fa-regular fa-circle-check me-2"></i>Biodata
+          </div>
+          <div class="col text-form-me text-center fs-6 py-3">
+            <i class="fa-regular fa-circle-check me-2"></i>Nilai Pengetahuan
+          </div>
+          <div
+            class="col text-form-me text-center fs-6 py-3 border-bottom border-primary-subtle"
+          >
+            <i class="fa-regular fa-circle-check me-2"></i>Kondisi Kesehatan
+          </div>
+          <div class="col text-form-me text-center fs-6 py-3">
+            <i class="fa-regular fa-circle me-2"></i>Orangtua
+          </div>
+        </div>
+        <!-- End of Daftar Form -->
+
+        <!-- Form Biodata -->
+        <div class="p-5">
+          <form action="#">
+            <div class="row">
+              <div class="col-12 col-sm-6">
+                <div class="mb-3">
+                  <label for="golonganDarah" class="form-label fw-semibold"
+                    >Golongan Darah:</label
+                  >
+                  <select
+                    class="form-select border-orange"
+                    id="golonganDarah"
+                    required
+                  >
+                    <option value="" disabled selected>
+                      Pilih golongan darah
+                    </option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="AB">AB</option>
+                    <option value="O">O</option>
+                  </select>
+                </div>
+                <div class="form-group mb-3">
+                  <label for="tinggiBadan" class="form-label fw-semibold"
+                    >Tinggi Badan (cm):</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control input-tanpa-arrow"
+                    id="tinggiBadan"
+                    placeholder="Masukkan tinggi badan"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="beratBadan" class="form-label fw-semibold"
+                    >Berat Badan (kg):</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control input-tanpa-arrow"
+                    id="beratBadan"
+                    placeholder="Masukkan berat badan"
+                    required
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="alergi" class="form-label fw-semibold"
+                    >Apakah Anda memiliki alergi?</label
+                  >
+                  <select
+                    class="form-select border-orange"
+                    id="alergi"
+                    required
+                  >
+                    <option value="" disabled selected>Pilih jawaban</option>
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                  </select>
+                </div>
+                <div id="jenisAlergiSection" class="visually-hidden">
+                  <label for="jenisAlergi" class="form-label fw-semibold"
+                    >Jika Ya, sebutkan jenis alergi:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jenisAlergi"
+                    placeholder="Sebutkan jenis alergi"
+                    required
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="penyakitKronis" class="form-label fw-semibold"
+                    >Apakah Anda memiliki riwayat penyakit kronis?</label
+                  >
+                  <select
+                    class="form-select border-orange"
+                    id="penyakitKronis"
+                    required
+                  >
+                    <option value="" disabled selected>Pilih jawaban</option>
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                  </select>
+                </div>
+
+                <div id="jenisPenyakitSection" class="visually-hidden">
+                  <label for="jenisPenyakit" class="form-label fw-semibold"
+                    >Jika Ya, sebutkan jenis penyakit:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jenisPenyakit"
+                    placeholder="Sebutkan jenis penyakit"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="perawatanMedis" class="form-label fw-semibold"
+                    >Apakah Anda sedang dalam perawatan medis?</label
+                  >
+                  <select
+                    class="form-select border-orange"
+                    id="perawatanMedis"
+                    required
+                  >
+                    <option value="" disabled selected>Pilih jawaban</option>
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                  </select>
+                </div>
+
+                <div id="jenisPerawatanSection" class="visually-hidden">
+                  <label for="jenisPerawatan" class="form-label fw-semibold"
+                    >Jika Ya, sebutkan jenis perawatan:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jenisPerawatan"
+                    placeholder="Sebutkan jenis perawatan"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-6">
+                <div class="form-group mb-3">
+                  <label for="operasi" class="form-label fw-semibold"
+                    >Apakah Anda pernah menjalani operasi?</label
+                  >
+                  <select
+                    class="form-select border-orange"
+                    id="operasi"
+                    required
+                  >
+                    <option value="" disabled selected>Pilih jawaban</option>
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                  </select>
+                </div>
+
+                <div id="jenisOperasiSection" class="visually-hidden">
+                  <label for="jenisOperasi" class="form-label fw-semibold"
+                    >Jika Ya, sebutkan jenis operasi dan tanggal:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jenisOperasi"
+                    placeholder="Masukkan jenis operasi dan tanggal"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="obatObatan" class="form-label fw-semibold"
+                    >Apakah Anda rutin mengonsumsi obat-obatan?</label
+                  >
+                  <select
+                    class="form-select border-orange"
+                    id="obatObatan"
+                    required
+                  >
+                    <option value="" disabled selected>Pilih jawaban</option>
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                  </select>
+                </div>
+
+                <div id="jenisObatSection" class="visually-hidden">
+                  <label for="jenisObat" class="form-label fw-semibold"
+                    >Jika Ya, sebutkan jenis obat:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jenisObat"
+                    placeholder="Masukkan jenis obat"
+                    required
+                  />
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="keterbatasanFisik" class="form-label fw-semibold"
+                    >Apakah Anda memiliki keterbatasan fisik atau kebutuhan
+                    khusus?</label
+                  >
+                  <select
+                    class="form-select border-orange"
+                    id="keterbatasanFisik"
+                    required
+                  >
+                    <option value="" disabled selected>Pilih jawaban</option>
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Tidak</option>
+                  </select>
+                </div>
+
+                <div id="jenisKeterbatasanSection" class="visually-hidden">
+                  <label for="jenisKeterbatasan" class="form-label fw-semibold"
+                    >Jika Ya, sebutkan keterbatasan atau kebutuhan
+                    khusus:</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="jenisKeterbatasan"
+                    placeholder="Masukkan keterbatasan atau kebutuhan khusus"
+                    required
+                  />
+                </div>
+                <div class="form-group mb-3">
+                  <label for="keteranganTambahan" class="form-label fw-semibold"
+                    >Keterangan tambahan mengenai kondisi kesehatan:</label
+                  >
+                  <textarea
+                    class="form-control"
+                    id="keteranganTambahan"
+                    rows="8"
+                    placeholder="Masukkan keterangan tambahan"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+          </form>
+          <p class="fw-semibold mt-3">Catatan:</p>
+          <p class="text-rata">
+            Isikan informasi kesehatan ini dengan lengkap dan jujur. SMA
+            Unggulan Rushd hanya menyediakan fasilitas untuk pengobatan ringan.
+            Untuk kebutuhan pengobatan yang lebih serius, hal tersebut menjadi
+            tanggung jawab orang tua atau wali siswa. Penyampaian informasi yang
+            tidak benar mengakibatkan diskualifikasi calon siswa atau siswa.
+          </p>
+        </div>
+        <!-- End of Form Biodata -->
+        <hr />
+        <div class="row px-5 py-3">
+          <div class="col-12 col-sm-6">
+            <p class="text-body-tertiary">
+              Pastikan data yang diisikan sudah benar!
+            </p>
+          </div>
+          <div
+            class="col-12 col-sm-6 d-flex justify-content-sm-end justify-content-between gap-3"
+          >
+            <button type="button" class="btn button-cancel-form">Cancel</button>
+            <button type="button" class="btn btn-primary">
+              Continue<i class="fa-solid fa-arrow-left ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        function toggleRequiredAndVisibility(
+          selectElement,
+          detailSection,
+          detailInput
+        ) {
+          function updateDetailInput() {
+            const isYes = selectElement.value === "Ya";
+            detailSection.classList.toggle("visually-hidden", !isYes);
+            detailInput.required = isYes;
+
+            if (!isYes) {
+              detailInput.value = "";
+              detailInput.disabled = true; // Disable input when not required
+            } else {
+              detailInput.disabled = false; // Enable input when required
+            }
+          }
+
+          selectElement.addEventListener("change", updateDetailInput);
+
+          // Initial call to set the correct state on page load
+          updateDetailInput();
+        }
+
+        const formFields = [
+          {
+            select: "alergi",
+            section: "jenisAlergiSection",
+            input: "jenisAlergi",
+          },
+          {
+            select: "penyakitKronis",
+            section: "jenisPenyakitSection",
+            input: "jenisPenyakit",
+          },
+          {
+            select: "perawatanMedis",
+            section: "jenisPerawatanSection",
+            input: "jenisPerawatan",
+          },
+          {
+            select: "operasi",
+            section: "jenisOperasiSection",
+            input: "jenisOperasi",
+          },
+          {
+            select: "obatObatan",
+            section: "jenisObatSection",
+            input: "jenisObat",
+          },
+          {
+            select: "keterbatasanFisik",
+            section: "jenisKeterbatasanSection",
+            input: "jenisKeterbatasan",
+          },
+        ];
+
+        formFields.forEach((field) => {
+          const selectElement = document.getElementById(field.select);
+          const detailSection = document.getElementById(field.section);
+          const detailInput = document.getElementById(field.input);
+
+          if (selectElement && detailSection && detailInput) {
+            toggleRequiredAndVisibility(
+              selectElement,
+              detailSection,
+              detailInput
+            );
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

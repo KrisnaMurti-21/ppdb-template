@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SMA Unggulan RUSHD</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Icons from Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="form-bg">
+    <div class="container mt-5 mb-5 rounded">
+      <div class="title-form-me fw-bold px-5 fs-4 rounded-top py-3">
+        Isi Biodata Calon Siswa
+      </div>
+      <div class="bg-white pt-3 rounded-bottom">
+        <!-- tab daftar form -->
+        <div class="row px-5">
+          <div
+            class="col text-form-me text-center fs-6 py-3 border-bottom border-primary-subtle"
+          >
+            <i class="fa-regular fa-circle-check me-2"></i>Biodata
+          </div>
+          <div class="col text-form-me text-center fs-6 py-3">
+            <i class="fa-regular fa-circle me-2"></i>Nilai Pengetahuan
+          </div>
+          <div class="col text-form-me text-center fs-6 py-3">
+            <i class="fa-regular fa-circle me-2"></i>Kondisi Kesehatan
+          </div>
+          <div class="col text-form-me text-center fs-6 py-3">
+            <i class="fa-regular fa-circle me-2"></i>Orangtua
+          </div>
+        </div>
+        <!-- End of Daftar Form -->
+
+        <!-- Form Biodata -->
+        <div class="p-5">
+          <form action="#">
+            <div class="row">
+              <div class="col-sm-4 col-12">
+                <div class="mb-3">
+                  <label for="name" class="form-label fw-semibold"
+                    >Nama Lengkap :</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Masukkan Nama Lengkap"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="asal_sekolah" class="form-label fw-semibold"
+                    >Asal Sekolah :</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="asal_sekolah"
+                    placeholder="Masukkan Asal Sekolah"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nisn" class="form-label fw-semibold"
+                    >NISN :</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nisn"
+                    placeholder="Masukkan NISN"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="nisn" class="form-label fw-semibold"
+                    >Jenis Kelamin :</label
+                  >
+                  <select
+                    name="jenis_kelamin"
+                    class="form-select"
+                    aria-label="Default select example"
+                  >
+                    <option selected>Jenis Kelamin</option>
+                    <option value="1">Laki-laki</option>
+                    <option value="2">Perempuan</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="mb-3">
+                  <label for="tempat_lahir" class="form-label fw-semibold"
+                    >Tempat Lahir :</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tempat_lahir"
+                    placeholder="Masukkan Tempat Lahir"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="tgl_lahir" class="form-label fw-semibold"
+                    >Tempat Lahir :</label
+                  >
+                  <input
+                    type="date"
+                    name="tgl_lahir"
+                    id="tgl_lahir"
+                    class="form-control"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="alamat_rumah" class="form-label fw-semibold"
+                    >Alamat Rumah :</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="alamat_rumah"
+                    placeholder="Masukkan Alamat Rumah"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="kota" class="form-label fw-semibold"
+                    >Kabupaten/Kota :</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="kota"
+                    placeholder="Masukkan Kabupaten/Kota"
+                  />
+                </div>
+              </div>
+              <div class="col-12 col-sm-4">
+                <div class="mb-3">
+                  <label for="provinsi" class="form-label fw-semibold"
+                    >Provinsi :</label
+                  >
+
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="provinsi"
+                    placeholder="Masukkan Provinsi"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="telephone" class="form-label fw-semibold"
+                    >Nomor Telepon/HP :</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="telephone"
+                    placeholder="Masukkan Nomor Telepon/HP"
+                  />
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- End of Form Biodata -->
+        <hr />
+        <div class="row px-5 py-3">
+          <div class="col-12 col-sm-6">
+            <p class="text-body-tertiary">
+              Pastikan data yang diisikan sudah benar!
+            </p>
+          </div>
+          <div
+            class="col-12 col-sm-6 d-flex justify-content-sm-end justify-content-between gap-3"
+          >
+            <button type="button" class="btn button-cancel-form">Cancel</button>
+            <button type="button" class="btn btn-primary">
+              Continue<i class="fa-solid fa-arrow-left ms-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

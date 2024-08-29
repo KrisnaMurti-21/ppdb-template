@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        .upload-container {
+            max-width: 37.5rem;
+            margin: 0 auto;
+            padding: 1.25rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .dropzone-wrapper {
+            border: 0.125rem dashed #ccc;
+            color: #ccc;
+            position: relative;
+            height: 9.375rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dropzone-wrapper:hover,
+        .dropzone-wrapper.dragover {
+            background: #f8f8f8;
+            border-color: #999;
+        }
+
+        .dropzone {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .preview-zone {
+            text-align: center;
+        }
+
+        .box {
+            box-shadow: 0 0 0.3125rem rgba(0, 0, 0, 0.15);
+            border-radius: 0.3125rem;
+            overflow: hidden;
+            padding: 0.625rem;
+            margin-top: 0.625rem;
+        }
+
+        .btn-reset {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 0.625rem 1.25rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 0.25rem 0.125rem;
+            cursor: pointer;
+            border-radius: 0.25rem;
+            transition: background-color 0.3s;
+        }
+
+        .btn-reset:hover {
+            background-color: #45a049;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 48rem) {
+            .dropzone-wrapper {
+                height: 7.5rem;
+            }
+
+            .btn-reset {
+                font-size: 0.875rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        @media (max-width: 30rem) {
+            .dropzone-wrapper {
+                height: 6.25rem;
+            }
+
+            .btn-reset {
+                font-size: 0.75rem;
+                padding: 0.375rem 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="upload-container">
+        <div class="form-group">
+            <div class="dropzone-wrapper">
+                <input type="file" name="file" class="dropzone">
+                <span>Drop file here or click to upload</span>
+            </div>
+            <div class="preview-zone hidden">
+                <div class="box">
+                    <div class="box-body"></div>
+                </div>
+            </div>
+            <button type="button" class="btn-reset hidden">Reset</button>
+        </div>
+        <button id="uploadBtn" type="submit">Submit</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script>
+        function readFile(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+                    var htmlPreview = 
+                        '<img width="200" src="' + e.target.result + '" />' +
+                        '<p>' + input.files[0].name + '</p>';
+                    var wrapperZone = $(input).parent();
+                    var previewZone = $(input).parent().parent().find('.preview-zone');
+                    var boxZone = $(input).parent().parent().find('.preview-zone').find('.box').find('.box-body');
+                    
+                    wrapperZone.removeClass('dragover');
+                    wrapperZone.addClass('hidden');  // Hide the dropzone wrapper
+                    previewZone.removeClass('hidden');
+                    boxZone.empty();
+                    boxZone.append(htmlPreview);
+                    $('.btn-reset').removeClass('hidden');
+                    $('#uploadBtn').attr('disabled', true);
+                };
+                
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        function reset(e) {
+            e.wrap('<form>').closest('form').get(0).reset();
+            e.unwrap();
+        }
+
+        $(".dropzone").change(function(){
+            readFile(this);
+        });
+
+        $('.dropzone-wrapper').on('dragover', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).addClass('dragover');
+        });
+
+        $('.dropzone-wrapper').on('dragleave', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            $(this).removeClass('dragover');
+        });
+
+        $('.btn-reset').on('click', function() {
+            var boxZone = $(this).parents('.preview-zone').find('.box-body');
+            var previewZone = $(this).parents('.preview-zone');
+            var dropzone = $(this).parents('.form-group').find('.dropzone');
+            var dropzoneWrapper = $(this).parents('.form-group').find('.dropzone-wrapper');
+            
+            boxZone.empty();
+            previewZone.addClass('hidden');
+            reset(dropzone);
+            dropzoneWrapper.removeClass('hidden');  // Show the dropzone wrapper
+            $(this).addClass('hidden');
+            $('#uploadBtn').attr('disabled', false);
+        });
+    </script>
+</body>
+</html>
